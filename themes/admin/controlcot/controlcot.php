@@ -22,14 +22,13 @@ $R['user_default_avatar'] = '<img src="datas/defaultav/blank.png" alt="'.cot::$L
 /**
  * Forms
  */
-$R['input_select']   = '<select name="{$name}" {$attrs} class="uk-select">{$options}</select>{$error}';
+$R['input_select']   = '<select name="{$name}" {$attrs} class="uk-select uk-border-rounded">{$options}</select>{$error}';
 $R['input_submit']   = '<button type="submit" name="{$name}" {$attrs} class="form-control" >{$value}</button>';
-$R['input_text']     = '<input type="text" name="{$name}" value="{$value}" {$attrs} class="uk-input" />{$error}';
-$R['input_textarea'] = '<textarea name="{$name}" rows="{$rows}" cols="{$cols}" {$attrs}  class="uk-textarea">{$value}</textarea>{$error}';
-$R['input_check']    = '<div><label><input class="uk-checkbox" type="checkbox" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}</label></div>';
-$R['input_checkbox'] = '<div class="checkbox"><input type="hidden" name="{$name}" value="{$value_off}" /><label>'.
-    '<input type="checkbox" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}</label></div>';
-$R['input_radio'] = '<input class="uk-radio" type="radio" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}';
+$R['input_text']     = '<input type="text" name="{$name}" value="{$value}" {$attrs} class="uk-input uk-border-rounded" />{$error}';
+$R['input_textarea'] = '<textarea name="{$name}" rows="{$rows}" cols="{$cols}" {$attrs}  class="uk-textarea uk-border-rounded">{$value}</textarea>{$error}';
+$R['input_check']    = '<div><label><input class="uk-checkbox uk-background-default" type="checkbox" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}</label></div>';
+$R['input_checkbox'] = '<input type="hidden" name="{$name}" value="{$value_off}" class="uk-checkbox uk-background-default" /><label><input type="checkbox" name="{$name}" value="{$value}"{$checked} class="uk-checkbox uk-background-default" /> {$title}</label>';
+$R['input_radio'] = '<input class="uk-radio uk-background-default" type="radio" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}';
 
 /**
  * Pagination
