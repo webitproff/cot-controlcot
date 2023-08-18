@@ -76,29 +76,76 @@
       <span class="uk-text-middle">
         <i class="ti ti-settings uk-h3"></i>
       </span>
-      <span class="uk-text-middle">{PHP.L.home_ql_b1_title}</span>
+      <span class="uk-text-middle">{PHP.L.home_site_props}</span> <span uk-nav-parent-icon></span>
     </a>
     <ul class="uk-nav-sub uk-list-divider">
       <li>
-        <a href="{PHP|cot_url('admin','m=extrafields')}">{PHP.L.adm_extrafields}</a>
+        <a href="{PHP|cot_url('admin','m=extrafields')}">{PHP.L.Extrafields}</a>
       </li>
       <li>
-        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=menus')}">{PHP.L.home_ql_b1_4}</a>
+        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=menus')}">{PHP.L.core_menus}</a>
       </li>
       <li>
-        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=main')}">{PHP.L.home_ql_b1_1}</a>
+        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=main')}">{PHP.L.core_main}</a>
       </li>
       <li>
-        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=title')}">{PHP.L.home_ql_b1_2}</a>
+        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=title')}">{PHP.L.core_title}</a>
       </li>
       <li>
-        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=theme')}">{PHP.L.home_ql_b1_3}</a>
+        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=theme')}">{PHP.L.core_theme}</a>
       </li>
       <li>
-        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=locale')}">{PHP.L.Locale}</a>
+        <a href="{PHP|cot_url('admin','m=config&n=edit&o=core&p=locale')}">{PHP.L.core_locale}</a>
       </li>
     </ul>
   </li>
-					
-					{FILE "{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/inc/uk-nav-side-cot-rc.tpl"}  
+<!-- IF {PHP.cot_modules.page} -->
+	<li>
+	  <a href="{PHP|cot_url('admin', 'm=page')}" title="">
+	    <span class="uk-margin-small-right" uk-icon="cog"></span>
+	    <span class="uk-text-bold uk-text-medium">Статьи и новости</span>
+	  </a>
+	</li>
+<!-- ENDIF -->
+<!-- IF {PHP.cot_modules.projects} -->
+	<li>
+	  <a href="{PHP|cot_url('admin', 'm=projects')}" title="">
+	    <span class="uk-margin-small-right" uk-icon="cog"></span>
+	    <span class="uk-text-bold uk-text-medium">Задания и заявки экспертам</span>
+	  </a>
+	</li>
+<!-- ENDIF -->
+<!-- IF {PHP.cot_modules.services} -->
+	<li>
+	  <a href="{PHP|cot_url('admin', 'm=services')}" title="">
+	    <span class="uk-margin-small-right" uk-icon="cog"></span>
+	    <span class="uk-text-bold uk-text-medium">Услуги Экспертов</span>
+	  </a>
+	</li>
+<!-- ENDIF -->
+<!-- IF {PHP.cot_modules.market} -->
+	<li>
+	  <a href="{PHP|cot_url('admin', 'm=market')}" title="">
+	    <span class="uk-margin-small-right" uk-icon="cog"></span>
+	    <span class="uk-text-bold uk-text-medium">Маркетплейс</span>
+	  </a>
+	</li>
+<!-- ENDIF -->
+	<!-- IF {PHP.cot_plugins_active.usermanager} -->
+	<li>
+	  <a href="admin/other?p=usermanager" title="">
+	    <span class="uk-margin-small-right" uk-icon="users"></span>
+	    <span class="uk-text-bold uk-text-medium">Менеджер пользователей</span>
+	  </a>
+	</li>
+	<!-- ENDIF -->
+	<li>
+	  <a class="" target="_blank" href="{PHP|cot_url('index')}" title="{PHP.L.Ctrl_Open_Frontsite}">
+	    <span class="uk-text-middle">
+	      <i class="ti ti ti-browser-check uk-h3"></i>
+	    </span>
+	    <span class="uk-text-bold uk-text-medium uk-text-capitalize uk-text-warning">{PHP.L.Ctrl_Open_Frontsite}</span>
+	  </a>
+	</li>	
+					<!-- FILE "{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/inc/uk-nav-side-cot-rc.tpl" -->  
 </ul>
