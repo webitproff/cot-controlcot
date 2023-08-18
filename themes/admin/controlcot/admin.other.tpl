@@ -1,4 +1,5 @@
 <!-- BEGIN: MAIN -->
+<div uk-height-viewport="expand: true">
 <div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow">
   <h2>
     <span class="uk-h3 uk-text-bold uk-link-text">{PHP.L.Core}</span>
@@ -6,8 +7,8 @@
   <dl class="uk-description-list uk-description-list-divider">
     <dt>
       <a class="uk-link-text" href="{ADMIN_OTHER_URL_CACHE}">
-        <span class="uk-margin-small-righr">
-          <i class="ti ti-device-heart-monitor uk-h2 uk-text-middle"></i>
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-solid fa-gauge-high fa-2xl"></i>
         </span>
         <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_internalcache_desc}"> {PHP.L.adm_internalcache}</span>
       </a>
@@ -15,8 +16,8 @@
     <dd>{PHP.L.adm_internalcache_desc}</dd>
     <dt>
       <a class="uk-link-text" href="{ADMIN_OTHER_URL_DISKCACHE}">
-        <span class="uk-margin-small-righr">
-          <i class="ti ti-gauge uk-h2 uk-text-middle uk-text-danger"></i>
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-solid fa-compact-disc  fa-2xl"></i>
         </span>
         <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_diskcache_desc}"> {PHP.L.adm_diskcache}</span>
       </a>
@@ -24,8 +25,8 @@
     <dd>{PHP.L.adm_diskcache_desc}</dd>
     <dt>
       <a class="uk-link-text" href="{ADMIN_OTHER_URL_LOG}">
-        <span class="uk-margin-small-righr">
-          <i class="ti ti-device-analytics uk-h2 uk-text-middle uk-text-muted"></i>
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-solid fa-chart-line fa-2xl"></i>
         </span>
         <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_log_desc}"> {PHP.L.adm_log}</span>
       </a>
@@ -33,22 +34,31 @@
     <dd>{PHP.L.adm_log_desc}</dd>
     <dt>
       <a class="uk-link-text" href="{ADMIN_OTHER_URL_EXFLDS}">
-        <span class="uk-margin-small-righr">
-          <i class="ti ti-tools uk-h2 uk-text-middle uk-text-warning"></i>
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-solid fa-table-list fa-2xl"></i>
         </span>
-        <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_extrafields_desc}"> {PHP.L.adm_extrafields}</span>
+        <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_extrafields_desc}"> {PHP.L.adm_extrafields} </span>
       </a>
     </dt>
-    <dd>{PHP.L.adm_extrafields_desc}</dd>
+    <dd>{PHP.L.adm_extrafields_desc} <br><a class="uk-link-heading" href="https://freelance-script.abuyfile.com/ekstrapolya-dlya-profilya-polzovatelya/" target="_blank" uk-tooltip="примеры и документация"><span class="uk-text-danger">Дополнительные колонки в таблицах БД расширений там, где это возможно</span></a></dd>
     <dt>
       <a class="uk-link-text" href="{ADMIN_OTHER_URL_INFOS}">
-        <span class="uk-margin-small-righr">
-          <i class="ti ti-info-square uk-h2 uk-text-middle uk-text-primary"></i>
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-solid fa-circle-info fa-2xl"></i>
         </span>
         <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_infos_desc}"> {PHP.L.adm_infos}</span>
       </a>
     </dt>
     <dd>{PHP.L.adm_infos_desc}</dd>
+    <dt>
+      <a class="uk-link-text" href="{ADMIN_OTHER_URL_PHPINFO}">
+        <span class="uk-margin-small-right uk-text-middle uk-text-warning">
+          <i class="fa-brands fa-php fa-2xl"></i>
+        </span>
+        <span class="uk-text-bold uk-text-capitalize uk-text-middle uk-text-medium" uk-tooltip="{PHP.L.adm_phpinfo_desc}"> {PHP.L.adm_phpinfo}</span>
+      </a>
+    </dt>
+    <dd>{PHP.L.adm_phpinfo_desc}</dd>
   </dl>
 </div>
 <!-- BEGIN: SECTION -->
@@ -80,5 +90,6 @@
   <a class="uk-alert-close uk-icon uk-close" uk-close=""></a>
   <p>Шаблон:</p>
   <code>admin.other.tpl</code>
+</div>
 </div>
 <!-- END: MAIN -->
