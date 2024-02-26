@@ -1,12 +1,12 @@
 # cot-controlcot
 ## «ControlCot» (КонтролКот) - современная, простая и легкая тема на UIKIT v3 для Административной Панели платформы управления контентом Cotonti Siena
-### [Больше скриншотов и поддержка](https://abuyfile.com/forums/cotonti/original/skins/tpl-free/topic37)
+### [Больше скриншотов и поддержка шаблона админки для движка котонти](https://abuyfile.com/forums/cotonti/original/skins/tpl-free/topic37)
 
 <a href="https://github.com/webitproff/cot-controlcot/blob/main/demoscreens/controlcot-home.png"><img class="wp-image-1259 size-large" src="https://github.com/webitproff/cot-controlcot/blob/main/demoscreens/controlcot-home.png" alt="Шаблон «ControlCot» для Cotonti Siena (КонтролКот) - современная, простая и легкая тема на UIKIT v3 для Административной Панели. ControlCot" width="640" height="486" /></a>
 
 - ControlCot Admin Theme for Cotonti Siena
 - открытый репозиторий на <a href="https://github.com/webitproff/cot-controlcot" target="_blank" rel="noopener">GitHub: https://github.com/webitproff/cot-controlcot</a>
-- Content Management Framework <a href="https://github.com/webitproff/cot-controlcot" target="_blank" rel="noopener">Cotonti Siena 0.9.23 https://www.cotonti.com</a>
+- Content Management Framework <a href="https://github.com/webitproff/cot-controlcot" target="_blank" rel="noopener">Cotonti Siena 0.9.24.2 https://www.cotonti.com</a>
 - version 1.9.24.2
 - date 05.17.2022 - 02.26.2024
 - author webitproff
