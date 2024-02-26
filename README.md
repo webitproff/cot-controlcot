@@ -1,5 +1,6 @@
 # cot-controlcot
-<a href="https://github.com/webitproff/cot-controlcot" rel="noopener">«ControlCot» (КонтролКот) - современная, простая и легкая тема на UIKIT v3 для Административной Панели платформы управления контентом Cotonti Siena</a>
+## «ControlCot» (КонтролКот) - современная, простая и легкая тема на UIKIT v3 для Административной Панели платформы управления контентом Cotonti Siena
+### [Больше скриншотов и поддержка](https://abuyfile.com/forums/cotonti/original/skins/tpl-free/topic37)
 
 <a href="https://github.com/webitproff/cot-controlcot/blob/main/demoscreens/controlcot-home.png"><img class="wp-image-1259 size-large" src="https://github.com/webitproff/cot-controlcot/blob/main/demoscreens/controlcot-home.png" alt="Шаблон «ControlCot» для Cotonti Siena (КонтролКот) - современная, простая и легкая тема на UIKIT v3 для Административной Панели. ControlCot" width="640" height="486" /></a>
 
