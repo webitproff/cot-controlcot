@@ -31,12 +31,12 @@
                 <a class="uk-navbar-item uk-link-heading" uk-tooltip="{PHP.L.header.Interface_Localization}" href="#">
                   <!-- IF {PHP.i18n_locale} == 'ru' -->
                   <span class="uk-icon-button uk-btn-scmtdlight">
-                    <img src="{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/img/flags/flag-ru.webp" class="" alt="{PHP.L.header.Interface_Localization}">
+                    <img src="themes/admin/controlcot/img/flags/flag-ru.webp" class="" alt="{PHP.L.header.Interface_Localization}">
                   </span>
                   <!-- ENDIF -->
                   <!-- IF {PHP.i18n_locale} == 'en' -->
                   <span class="uk-icon-button uk-btn-scmtdlight">
-                    <img src="{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/img/flags/flag-uk.webp" class="" alt="{PHP.L.header.Interface_Localization}">
+                    <img src="themes/admin/controlcot/img/flags/flag-uk.webp" class="" alt="{PHP.L.header.Interface_Localization}">
                   </span>
                   <!-- ENDIF -->
                   <div class="uk-navbar-subtitle uk-margin-3-top uk-light">
