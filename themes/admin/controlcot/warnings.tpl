@@ -1,27 +1,66 @@
 <!-- BEGIN: ERROR -->
-<div class="uk-margin-top uk-alert-danger uk-padding uk-panel uk-border-rounded" uk-alert>
-    <a class="uk-alert-close" uk-close></a>
-   <p class="uk-h4 uk-text-middle"><span class="uk-margin-small-right uk-text-danger" uk-icon="icon: warning; ratio: 1.5"></span> {PHP.L.Warning}! {PHP.L.Error}!</p>
-  <!-- BEGIN: ERROR_ROW -->
-  <div><p class="">{ERROR_ROW_MSG}</p></div>
-  <!-- END: ERROR_ROW -->
+<div class="uk-card uk-border-rounded border-fuchsia uk-card-small uk-alert-danger my-3" uk-alert>
+  <a class="uk-alert-close text-navy" uk-close></a>
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <i class="fa-solid fa-triangle-exclamation fs-1 text-fuchsia"></i>
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title text-navy uk-margin-remove-bottom">{PHP.L.Error}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <ul class="uk-list uk-list-divider text-navy">
+      <!-- BEGIN: ERROR_ROW -->
+      <li>{ERROR_ROW_MSG}</li>
+      <!-- END: ERROR_ROW -->
+    </ul>
+  </div>
 </div>
 <!-- END: ERROR -->
 <!-- BEGIN: WARNING -->
-<div class="uk-alert-warning uk-padding uk-panel uk-border-rounded" uk-alert>
-    <a class="uk-alert-close" uk-close></a>
-   <p class="uk-h4">{PHP.L.Warning}</p>
-  <!-- BEGIN: WARNING_ROW -->
-  <div><p>{WARNING_ROW_MSG}</p></div>
-  <!-- END: WARNING_ROW -->
+<div class="uk-card uk-border-rounded border-navy uk-card-small uk-alert-warning my-3" uk-alert>
+  <a class="uk-alert-close text-navy" uk-close></a>
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <i class="fa-solid fa-person-circle-exclamation fs-1"></i>
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title text-navy uk-margin-remove-bottom">{PHP.L.Warning}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <ul class="uk-list uk-list-divider text-navy">
+      <!-- BEGIN: WARNING_ROW -->
+      <li>{WARNING_ROW_MSG}</li>
+      <!-- END: WARNING_ROW -->
+    </ul>
+  </div>
 </div>
 <!-- END: WARNING -->
 <!-- BEGIN: DONE -->
-<div class="uk-margin-top uk-alert-success uk-padding-small uk-panel uk-border-rounded" uk-alert>
-    <a class="uk-alert-close" uk-close></a>
-   <p class="uk-h4 uk-text-middle"><span class="uk-margin-small-right uk-text-warning" uk-icon="icon: happy; ratio: 1.5"></span> {PHP.L.Done}!</p>
-  <!-- BEGIN: DONE_ROW -->
-  <div><p class="">{DONE_ROW_MSG}</p></div>
-  <!-- END: DONE_ROW -->
+<div class="uk-card uk-border-rounded uk-card-small uk-alert-success uk-margin-top" uk-alert>
+  <a class="uk-alert-close" uk-close></a>
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        <i class="fa-solid fa-circle-check fa-2xl"></i>
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title uk-margin-remove-bottom">{PHP.L.Done}</h3>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <ul class="uk-list uk-list-divider text-navy">
+      <!-- BEGIN: DONE_ROW -->
+      <li>{DONE_ROW_MSG}</li>
+      <!-- END: DONE_ROW -->
+    </ul>
+  </div>
 </div>
 <!-- END: DONE -->

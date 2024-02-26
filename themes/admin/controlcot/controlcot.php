@@ -18,17 +18,53 @@ $R['notices_plain'] = '{$title}';
 $R['notices_notice'] = '<li class="media">{$notice}</li>';
 
 $R['user_default_avatar'] = '<img src="datas/defaultav/blank.png" alt="'.cot::$L['Avatar'].'" class="avatar" />';
-
+$R['users_code_grplist_begin'] = '<ul class="uk-list uk-list-divider">';
+$R['users_code_grplist_end'] = '</ul>';
+$R['users_code_grplist_item'] = '<li>{$item}</li>';
+$R['users_code_grplist_item_main'] = '<li><strong>{$item}</strong></li>';
+$R['users_input_grplist_checkbox'] = '<label class="uk-margin-small-right"><input type="checkbox" class="uk-checkbox" name="{$name}" value="1"{$checked}{$attrs} /></label>';
+$R['users_input_grplist_radio'] = '<label class="uk-margin-small-right"><input type="radio" class="uk-radio" name="{$name}" value="{$value}"{$checked}{$attrs} /></label>';
 /**
  * Forms
  */
-$R['input_select']   = '<select name="{$name}" {$attrs} class="uk-select uk-border-rounded">{$options}</select>{$error}';
+
+$R['input_select'] = '<select class="uk-select uk-border-rounded" name="{$name}"{$attrs}>{$options}</select>{$error}';
+$R['input_option'] = '<option value="{$value}"{$selected}>{$title}</option>';
 $R['input_submit']   = '<button type="submit" name="{$name}" {$attrs} class="form-control" >{$value}</button>';
 $R['input_text']     = '<input type="text" name="{$name}" value="{$value}" {$attrs} class="uk-input uk-border-rounded" />{$error}';
 $R['input_textarea'] = '<textarea name="{$name}" rows="{$rows}" cols="{$cols}" {$attrs}  class="uk-textarea uk-border-rounded">{$value}</textarea>{$error}';
 $R['input_check']    = '<div><label><input class="uk-checkbox uk-background-default" type="checkbox" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}</label></div>';
 $R['input_checkbox'] = '<input type="hidden" name="{$name}" value="{$value_off}" class="uk-checkbox uk-background-default" /><label><input type="checkbox" name="{$name}" value="{$value}"{$checked} class="uk-checkbox uk-background-default" /> {$title}</label>';
 $R['input_radio'] = '<input class="uk-radio uk-background-default" type="radio" name="{$name}" value="{$value}"{$checked}{$attrs} /> {$title}';
+
+
+$R['input_text_field_name'] = '<input class="uk-input uk-border-rounded exfldname" type="{$type}" name="{$name}" placeholder="'.cot::$L['Ctrl_ex_myfield_name'].'" value="{$value}" {$attrs} />{$error}';
+$R['input_textarea_field_description'] = '<textarea class="uk-textarea uk-border-rounded exflddesc" name="{$name}" rows="{$rows}" cols="{$cols}" placeholder="'.cot::$L['Ctrl_ex_myfield_description'].'" {$attrs} >{$value}</textarea>{$error}';
+$R['input_textarea_field_html'] = '<textarea class="uk-textarea uk-height-small uk-border-rounded" name="{$name}" rows="{$rows}" cols="{$cols}"  placeholder="'.cot::$L['Ctrl_ex_myfield_html'].'" {$attrs} >{$value}</textarea>{$error}';
+$R['input_option_field_type'] = '<option class="uk-text-medium uk-text-danger" value="{$value}"{$selected}>{$title}</option>';
+$R['input_select_field_type'] = '<select class="uk-select uk-border-rounded" name="{$name}"{$attrs}>{$options}</select>{$error}';
+$R['input_textarea_field_params'] = '<textarea class="uk-textarea uk-height-small uk-border-rounded exfldparams" name="{$name}" rows="{$rows}" cols="{$cols}" placeholder="'.cot::$L['Ctrl_ex_myfield_params'].'" {$attrs} >{$value}</textarea>{$error}';
+$R['input_textarea_field_variants'] = '<textarea class="uk-textarea uk-height-small uk-border-rounded exfldvariants" name="{$name}" rows="{$rows}" cols="{$cols}" placeholder="'.cot::$L['Ctrl_ex_myfield_variants'].'" {$attrs} >{$value}</textarea>{$error}';
+$R['input_textarea_field_default'] = '<textarea class="uk-textarea uk-border-rounded" name="{$name}" rows="{$rows}" cols="{$cols}" placeholder="'.cot::$L['Ctrl_ex_myfield_default'].'" {$attrs} >{$value}</textarea>{$error}';
+$R['input_date'] =  '<div class="uk-grid-small uk-child-width-expand@s uk-margin-top" data-uk-grid>
+<div class="">
+	<label class="uk-form-label">День</label>{$day}
+</div>
+<div class="">
+	<label class="uk-form-label">Месяц</label>{$month}
+</div>
+<div class="">
+	<label class="uk-form-label">Год</label>{$year}
+</div>
+<div class="">
+	<label class="uk-form-label">Часы</label>{$hour}
+</div>
+<div class="">
+	<label class="uk-form-label">Минуты</label>{$minute}
+</div>
+</div>';
+$R['input_date_short'] =  '<div class="uk-grid-small uk-child-width-1-1@s uk-child-width-1-3@m uk-margin-top" data-uk-grid><div class="uk-width-1-3@m"><label class="uk-form-label">День</label>{$day}</div><div class="uk-width-1-3@m"><label class="uk-form-label">Месяц</label>{$month}</div><div class="uk-width-1-3@m"><label class="uk-form-label">Год</label>{$year}</div></div>';
+
 
 /**
  * Pagination
@@ -51,5 +87,5 @@ $R['admin_code_partrunning'] = '<span uk-tooltip="'.$L['Status'].'" class="uk-la
 $R['admin_code_notinstalled'] = '<span uk-tooltip="'.$L['Status'].'" class="uk-label uk-label-secondary">'.$L['adm_notinstalled'].'</span>';
 $R['admin_code_present'] = '<span uk-tooltip="'.$L['Status'].'" class="uk-label uk-label-success">'.$L['adm_present'].'</span>';
 
-
-?>
+require_once cot::$cfg['themes_dir'].'/admin/controlcot/controlcot.rc.php';
+require_once cot::$cfg['themes_dir'].'/admin/controlcot/controlcot.resources.php';

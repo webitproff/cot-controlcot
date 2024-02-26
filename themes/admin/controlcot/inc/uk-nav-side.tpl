@@ -102,7 +102,7 @@
 <!-- IF {PHP.cot_modules.page} -->
 	<li>
 	  <a href="{PHP|cot_url('admin', 'm=page')}" title="">
-	    <span class="uk-margin-small-right" uk-icon="cog"></span>
+	    <span class="uk-margin-small-right"><i class="fa-regular fa-newspaper fa-xl"></i></span>
 	    <span class="uk-text-bold uk-text-medium">Статьи и новости</span>
 	  </a>
 	</li>
@@ -131,11 +131,11 @@
 	  </a>
 	</li>
 <!-- ENDIF -->
-	<!-- IF {PHP.cot_plugins_active.usermanager} -->
+	<!-- IF {PHP.cot_plugins_active.userseditor} -->
 	<li>
-	  <a href="admin/other?p=usermanager" title="">
+	  <a href="admin/other?p=userseditor" title="">
 	    <span class="uk-margin-small-right" uk-icon="users"></span>
-	    <span class="uk-text-bold uk-text-medium">Менеджер пользователей</span>
+	    <span class="uk-text-bold uk-text-medium">Редактор пользователей</span>
 	  </a>
 	</li>
 	<!-- ENDIF -->

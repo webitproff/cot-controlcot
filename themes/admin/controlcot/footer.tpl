@@ -1,4 +1,3 @@
-
 <!-- BEGIN: FOOTER -->
 			</div>
 		</div>
@@ -38,6 +37,12 @@
 		<a id="toTop" href="" uk-tooltip="to Top" class="uk-icon-button uk-button-secondary uk-box-shadow-medium"  uk-icon="ratio: 1.2" uk-totop uk-scroll></a>
 	  </li>
 	</ul>
+</div>
+<div id="sidebar-offcanvas" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+	{FILE "{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/inc/uk-nav-side.tpl"}
+    </div>
 </div>
 {FOOTER_RC}
 <script>

@@ -1,8 +1,33 @@
-<!-- BEGIN: MAIN -->
-
+<!-- BEGIN: MAIN -->     
+<div class="uk-card uk-card-small uk-card-default uk-card-body uk-border-rounded uk-margin-top">
+  <div class="uk-flex-middle" uk-grid>
+    <div class="uk-width-4-5@m">
+      <h3>
+        <a class="uk-link-heading" href="{PHP.cfg.mainurl}" target="_blank" title="{PHP.L.hea_viewsite}">{PHP.cfg.maintitle}</a>
+      </h3>
+      <div class="uk-nav-subtitle">{PHP.cfg.subtitle}</div>
+    </div>
+    <div class="uk-width-auto@m uk-flex-first">
+	<!-- IF {{PHP.cfg.mainurl}/apple-icon.png} -->
+      <img src="{PHP.cfg.mainurl}/apple-icon.png" width="120" height="120">
+	<!-- ELSE -->
+	<img src="{PHP.cfg.mainurl}/{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/favicon-controlcot.webp" width="120" height="120">
+	<!-- ENDIF -->
+    </div>
+  </div>
+  <ul class="uk-list uk-list-divider">
+    <li> {PHP.L.System} & {PHP.L.Version} <span class="uk-label">v. {PHP.cfg.version}</span>
+    </li>
+	<!-- IF {PHP.cot_plugins_active.adminstats} -->
+    <li> {PHP.adminstats.database.title} <span class="uk-label">v. {PHP.adminstats.database.value} </span>
+    </li>
+	<!-- ENDIF -->
+    <li> {PHP.L.core_time} {PHP|$this,cot_date("datetime_fulltext")} </li>
+  </ul>
+</div>      
 <!-- BEGIN: UPDATE -->
 	<div class="uk-background-secondary uk-light uk-padding uk-panel">
-		<h3>{PHP.L.adminqv_update_notice}:</h3>
+		<h3>{PHP.L.home_update_notice}:</h3>
 		<p>{ADMIN_HOME_UPDATE_REVISION} {ADMIN_HOME_UPDATE_MESSAGE}</p>
 	</div>
 <!-- END: UPDATE -->
@@ -10,7 +35,9 @@
 	{FILE "{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/warnings.tpl"}
 </div>
 <!-- BEGIN: MAINPANEL -->
+<div class="uk-margin">
 	{ADMIN_HOME_MAINPANEL}
+</div>
 <!-- END: MAINPANEL -->
 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid>
 <!-- BEGIN: SIDEPANEL -->
@@ -24,7 +51,20 @@
 
 	
 <hr/>
-
+<!-- IF {PHP.cot_plugins_active.pagelist} -->
+<div class="uk-grid-small uk-child-width-1-2@m" uk-grid>
+    <div>
+        <div class="uk-card uk-background-default uk-border-rounded uk-box-shadow">
+		{PHP|sedby_pagelist('pagelist.admin', 7, 'page_count DESC', 'page_count > 0')} 
+		</div>
+    </div>
+    <div>
+        <div class="uk-card uk-background-default uk-border-rounded uk-box-shadow">
+		{PHP|sedby_pagelist('pagelist.admin', '7', 'page_date DESC')}
+		</div>
+    </div>
+</div>
+<!-- ENDIF -->
 
 	<!-- IF {PHP.cot_plugins_active.adminstats} -->
 	<div class="uk-grid-match uk-grid-small uk-child-width-1-2@m uk-child-width-1-3@l" uk-grid>

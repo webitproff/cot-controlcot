@@ -22,7 +22,7 @@
           </li>
           <!-- BEGIN: STATUS_ROW -->
           <li> <a  <!-- IF {PHP.status}=={STATUS_ROW_ID} --> class=""
-            <!-- ENDIF --> href="{STATUS_ROW_ID|cot_url('admin', 'm=other&p=sbr&status='$this)}">{STATUS_ROW_TITLE}</a>
+            <!-- ENDIF --> href="{STATUS_ROW_ID|cot_url('admin', 'm=other&p=sbr&status=$this')}">{STATUS_ROW_TITLE}</a>
           </li>
           <!-- END: STATUS_ROW -->
         </ul>

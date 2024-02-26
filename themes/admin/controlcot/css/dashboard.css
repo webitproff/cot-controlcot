@@ -41,6 +41,7 @@ a.uk-link-text:focus {
     cursor: pointer;
     color: #e40a5d!important
 }
+
 .uk-text-medium {
   font-size: medium;
 }
@@ -357,9 +358,16 @@ background: #293846;
 .shadow-secondary {
   box-shadow: 0 4px 8px rgba(55, 52, 34, 0.2),0 3px 3px rgba(21, 20, 14, 0.03);
 }
+.uk-bg-warnlight { background-color: #fee4cb; }
+.uk-txt-warnlight { color: #ff942e !important; }
+.shadow-warnlight {
+  box-shadow: 0 4px 8px rgba(255, 148, 46, 0.51),0 3px 3px rgb(254, 228, 203) !important;
+}
 .uk-border-btm {
   border-bottom: 2px solid #293846;
 }
+
+
 /* === jqModal === */
 /* The Window's CSS z-index value is respected (takes priority). If none is supplied,
 	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
@@ -383,21 +391,7 @@ background: #293846;
     border-radius: 8px;
 }
 
-.jqmWindow h4 {
-    border-bottom: 1px dotted #b0c4de;
-    font-size: 14px;
-    margin: 0 0 7px 0;
-    padding: 0 0 5px 0;
-    text-align: left;
-    color: #3E606F;
-}
 
-.jqmWindow p{
-    text-align: right;
-    margin: 15px 0 0 0;
-    font-size: x-small;
-    text-transform: lowercase;
-}
 
 .jqmOverlay { background-color: #000; }
 

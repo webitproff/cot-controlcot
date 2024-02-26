@@ -8,7 +8,7 @@
 			<td><a href="{TOP_ROW_USER_DETAILSLINK}">{TOP_ROW_USER_NAME}</a></td>
 			<td>{TOP_ROW_AREA}</td>
 			<td>{TOP_ROW_EXPIRE|cot_date('d.m.Y', $this)}</td>
-			<td><a href="{TOP_ROW_SERVICE_ID|cot_url('admin', 'm=other&p=paytop&a=delete&id='$this)}">{PHP.L.Delete}</a></td>
+			<td><a href="{TOP_ROW_SERVICE_ID|cot_url('admin', 'm=other&p=paytop&a=delete&id=$this')}">{PHP.L.Delete}</a></td>
 		</tr>
 		<!-- END: TOP_ROW -->
 	</table>

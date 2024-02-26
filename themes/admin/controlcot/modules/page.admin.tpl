@@ -187,6 +187,6 @@
 <div class="uk-visible@m uk-margin-vertical uk-alert-primary uk-alert" uk-alert="">
   <a class="uk-alert-close uk-icon uk-close" uk-close=""></a>
   <p>Шаблон:</p>
-  <code>/themes/admin/controlcot/modules/page.admin.tpl</code>
+  <code>/themes/admin/controlcot/modules/page.admin.tpl***</code>
 </div>
 <!-- END: MAIN -->

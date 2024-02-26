@@ -1,46 +1,77 @@
 <!-- BEGIN: MAIN -->
-		<h2>{PHP.L.Users}</h2>
+<div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow">
+  <h3><span class="uk-h3 uk-text-bold uk-link-text">{PHP.L.Users}</span></h3>
+
 		{FILE "{PHP.cfg.themes_dir}/admin/{PHP.cfg.admintheme}/warnings.tpl"}
-
-		<div class="block btn-toolbar">
-			<a title="{PHP.L.Configuration}" href="{ADMIN_USERS_URL}" class="btn btn-default">{PHP.L.Configuration}</a>
-			<a href="{ADMIN_USERS_EXTRAFIELDS_URL}" class="btn btn-default">{PHP.L.adm_extrafields}</a>
-		</div>
-
+  <div class="uk-grid-small uk-flex-center uk-text-center" uk-grid>
+    <div>
+		<a href="{ADMIN_USERS_EXTRAFIELDS_URL}" class="uk-button uk-button-small uk-button-primary">{PHP.L.adm_extrafields}</a>
+    </div>
+    <div>
+		<a title="{PHP.L.Configuration}" href="{ADMIN_USERS_URL}" class="uk-button uk-button-small uk-button-default">{PHP.L.Configuration}</a>
+    </div>
+  </div>
+</div>
 <!-- BEGIN: ADMIN_USERS_DEFAULT -->
-		<div class="block">
-			<table class="table">
-				<tr>
-					<td class="coltop width5">&nbsp;</td>
-					<td class="coltop width35">{PHP.L.Groups}</td>
-					<td class="coltop width20">{PHP.L.Members}</td>
-					<td class="coltop width20">{PHP.L.Enabled}</td>
-					<td class="coltop width20">{PHP.L.Action}</td>
-				</tr>
+
 <!-- BEGIN: USERS_ROW -->
-				<tr>
-					<td class="centerall">
-					<!-- IF {PHP.hidden_groups} AND {ADMIN_USERS_ROW_GRP_HIDDEN} == Yes -->{PHP.R.admin_icon_usergroup0}<!-- ELSE -->{PHP.R.admin_icon_usergroup1}<!-- ENDIF -->
-					<!-- ENDIF -->
-					</td>
-					<td>
-						<p class="strong"><a href="{ADMIN_USERS_ROW_GRP_ID|cot_url('users', 'gm='$this)}" title="{PHP.L.Edit}">{ADMIN_USERS_ROW_GRP_NAME} (#{ADMIN_USERS_ROW_GRP_ID})</a></p>
-						<p class="small">{ADMIN_USERS_ROW_GRP_DESC}</p>
-					</td>
-					<td class="centerall">{ADMIN_USERS_ROW_GRP_COUNT_MEMBERS}</td>
-					<td class="centerall">{ADMIN_USERS_ROW_GRP_DISABLED}</td>
-					<td class="centerall action">
-						<!-- IF !{ADMIN_USERS_ROW_GRP_SKIPRIGHTS} -->
-						<a title="{PHP.L.Rights}" href="{ADMIN_USERS_ROW_GRP_RIGHTS_URL}" class="btn btn-default">{PHP.L.short_rights}</a>
-						<!-- ENDIF -->
-						<a title="{PHP.L.Edit}" href="{ADMIN_USERS_ROW_GRP_TITLE_URL}" class="btn btn-default">{PHP.L.Edit}</a>
-					</td>
-				</tr>
+      <div class="uk-margin uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow">
+        <div class="" uk-grid>
+          <div class="uk-width-1-2@m uk-flex uk-flex-middle">
+            <ul class="uk-list uk-list-divider uk-width-1-1">
+              <li>
+                <div class="uk-grid-small uk-child-width-1-2 uk-flex" uk-grid>
+                  <div>
+                    <div class="uk-tile uk-padding-remove uk-flex uk-flex-left">
+					<div>
+					<span uk-tooltip="{PHP.L.Ctrl_Descr_usersgroup_ID}" class="uk-label uk-margin-small-right">ID {ADMIN_USERS_ROW_GRP_ID}</span>
+				
+
+				
+				<a uk-tooltip="{PHP.L.Open}" class="uk-link-text" href="{ADMIN_USERS_ROW_GRP_ID|cot_url('users', 'gm=$this')}">
+                  <span class="uk-text-middle uk-text-medium"> {ADMIN_USERS_ROW_GRP_NAME}</span>
+                </a></div>
+					</div>
+                  </div>
+                  <div>
+                    <div class="uk-tile uk-padding-remove uk-flex uk-flex-right">
+                      <span uk-tooltip="{PHP.L.Version}" class="uk-label">{ADMIN_USERS_ROW_GRP_COUNT_MEMBERS}</span>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+              <li>
+                <span uk-tooltip="{PHP.L.Ctrl_Descr_usersgroup}">{ADMIN_USERS_ROW_GRP_DESC}</span>
+              </li>
+              <li>
+                <div class="uk-tile uk-padding-remove uk-flex uk-flex-left">{PHP.L.Enabled}: {ADMIN_USERS_ROW_GRP_DISABLED}</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="uk-width-1-2@m">
+
+            <div class="uk-grid-small uk-flex-center uk-text-center" uk-grid>
+
+              <div>
+                <a uk-tooltip="{PHP.L.Edit}" class="uk-icon-button uk-button-warning" href="{ADMIN_USERS_ROW_GRP_TITLE_URL}" uk-icon="icon: settings; ratio: 1.2" title="{PHP.L.Edit}"></a>
+              </div>
+				<!-- IF !{ADMIN_USERS_ROW_GRP_SKIPRIGHTS} -->
+              <div>
+                <a uk-tooltip="{PHP.L.Rights}" class="uk-icon-button uk-button-success" href="{ADMIN_USERS_ROW_GRP_RIGHTS_URL}" uk-icon="icon: users; ratio: 1.2" title="{PHP.L.short_rights}"></a>
+              </div>
+			  <!-- ENDIF -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
 <!-- END: USERS_ROW -->
-			</table>
-		</div>
-		<div class="block">
-			<h3>{PHP.L.Add}:</h3>
+
+		<div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow" uk-height-viewport="expand: true">
+			<h3><span class="uk-h3 uk-text-bold uk-link-text">{PHP.L.Add}:</span></h3>
 			<form name="addlevel" id="addlevel" action="{ADMIN_USERS_FORM_URL}" method="post" class="ajax">
 			<table class="table">
 				<tr>
@@ -107,7 +138,7 @@
 		</div>
 <!-- END: ADMIN_USERS_DEFAULT -->
 <!-- BEGIN: ADMIN_USERS_EDIT -->
-		<div class="block">
+		<div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow" uk-height-viewport="expand: true">
 			<form name="editlevel" id="editlevel" action="{ADMIN_USERS_EDITFORM_URL}" method="post" class="ajax">
 				<table class="table">
 					<tr>

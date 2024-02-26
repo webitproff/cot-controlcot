@@ -1,5 +1,6 @@
 <!-- BEGIN: MAIN -->
-<div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow" uk-height-viewport="expand: true">
+<div uk-height-viewport="expand: true">
+<div class="uk-margin uk-margin-top uk-card uk-card-default uk-padding-small uk-width-expand uk-border-rounded uk-box-shadow">
   <h3><span class="uk-h3 uk-text-bold uk-link-text">{PHP.L.Configuration}</span></h3>
 		{FILE "{PHP.cfg.system_dir}/admin/tpl/warnings.tpl"}
 <!-- BEGIN: EDIT -->
@@ -19,13 +20,14 @@
 		<div class="uk-margin">
 			<dl>
 			  <dt class="uk-text-normal"><span class="uk-text-medium uk-link-text">{ADMIN_CONFIG_ROW_CONFIG_TITLE}:</span></dt>
-			  <dd>{ADMIN_CONFIG_ROW_CONFIG_MORE}</dd>
+			  <dd></dd>
 			</dl>
 		</div>
     </div>
     <div class="uk-width-2-3@l">
         <div class="uk-form-controls">
-            {ADMIN_CONFIG_ROW_CONFIG}
+            {ADMIN_CONFIG_ROW_CONFIG}<br>
+			<span class="uk-text-primary">{ADMIN_CONFIG_ROW_CONFIG_MORE}</span>
         </div>
     </div>
     <div class="uk-width-auto@l">
@@ -47,8 +49,7 @@
         <ul class="uk-list uk-list-large uk-list-striped">
     <!-- BEGIN: ADMIN_CONFIG_ROW -->
             <li><a class="uk-link-text" href="{ADMIN_CONFIG_ROW_URL}"><!-- IF {ADMIN_CONFIG_ROW_ICO} --><img src="{ADMIN_CONFIG_ROW_ICO}" uk-tooltip="" title="" class="uk-margin-small-right" width="27" height="27">
-<!-- ELSE -->
-          <img src="{PHP.cfg.system_dir}/admin/img/plugins32.png" uk-tooltip="" title="" class="uk-margin-small-right" width="27" height="27">
+<!-- ELSE --><span class="uk-text-middle uk-margin-small-right"><i class="fa-solid fa-sliders fa-2xl"></i></span>
           <!-- ENDIF --> 			<span class="uk-text-middle uk-text-medium"> {ADMIN_CONFIG_ROW_NAME}</span></a></li>
 	<!-- END: ADMIN_CONFIG_ROW -->
         </ul>
@@ -60,5 +61,6 @@
   <a class="uk-alert-close uk-icon uk-close" uk-close=""></a>
   <p>Шаблон:</p>
   <code>admin.config.tpl</code>
+</div>
 </div>
 <!-- END: MAIN -->

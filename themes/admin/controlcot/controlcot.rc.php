@@ -5,7 +5,7 @@
  * - public repository on GitHub: https://github.com/webitproff/cot-controlcot
  * @package Content Management Framework Cotonti Siena 0.9.23 https://www.cotonti.com
  * @version 1.0.1
- * @date 08.18.2023
+ * @date 07.18.2023
  * @author webitproff
  * @copyright Copyright (c) https://github.com/webitproff webitproff@gmail.com https://t.me/webitproff
  * @license BSD

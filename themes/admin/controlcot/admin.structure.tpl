@@ -129,8 +129,8 @@
   </div>
   <!-- END: OPTIONS -->
   <!-- BEGIN: DEFAULT -->
-  <div class="block">
-    <h3>{PHP.L.editdeleteentries}:</h3>
+  <div class="">
+    <h3><span class="uk-h4 uk-text-bold uk-link-text">{PHP.L.editdeleteentries}:</span></h3>
     <form name="savestructure" id="savestructure" action="{ADMIN_STRUCTURE_UPDATE_FORM_URL}" method="post" class="uk-form-horizontal uk-margin ajax" enctype="multipart/form-data">
       <!-- BEGIN: ROW -->
       <div class="uk-tile uk-background-muted uk-padding-small uk-width-1-1 uk-box-shadow-medium uk-margin-bottom uk-border-rounded">
@@ -161,16 +161,17 @@
               <div>
                 <a uk-tooltip="{PHP.L.Options} {PHP.L.short_config}" class="ajax uk-icon-button uk-button-warning" href="{ADMIN_STRUCTURE_OPTIONS_URL}" uk-icon="icon: settings; ratio: 1.2" title="{PHP.L.short_config}"></a>
               </div>
-              <!-- IF {ADMIN_STRUCTURE_RIGHTS_URL} -->
-              <div>
-                <a uk-tooltip="{PHP.L.short_rights}" class="uk-icon-button uk-button-success" href="{ADMIN_STRUCTURE_RIGHTS_URL}" uk-icon="icon: users; ratio: 1.2" title="{PHP.L.short_rights}"></a>
-              </div>
-              <!-- ENDIF -->
-              <!-- IF {PHP.dozvil} -->
-              <div>
-                <a uk-tooltip="{PHP.L.Delete}" class="uk-icon-button uk-button-danger" href="{ADMIN_STRUCTURE_UPDATE_DEL_URL}" uk-icon="icon: trash; ratio: 1.2" title=""></a>
-              </div>
-              <!-- ENDIF -->
+  <div>
+							<!-- IF {ADMIN_STRUCTURE_RIGHTS_URL} -->
+							<a  uk-tooltip="{PHP.L.Rights}" title="{PHP.L.Rights}"  uk-icon="icon: users; ratio: 1.2" href="{ADMIN_STRUCTURE_RIGHTS_URL}" class="uk-icon-button uk-button-success"></a>
+							<!-- ENDIF -->
+							 </div>
+							 <div>
+							<!-- IF {ADMIN_STRUCTURE_CAN_DELETE} -->
+							<a uk-tooltip="{PHP.L.Delete}" title="{PHP.L.Delete}" href="{ADMIN_STRUCTURE_DELETE_CONFIRM_URL}" class="confirmLink uk-icon-button uk-button-danger" uk-icon="icon: trash; ratio: 1.2"></a>
+							<!-- ENDIF -->
+							 </div>
+
               <div>
                 <a uk-tooltip="{PHP.L.short_open}" target="_blank" class="uk-icon-button uk-button-primary" href="{ADMIN_STRUCTURE_JUMPTO_URL}" uk-icon="icon: link; ratio: 1.2" title=""></a>
               </div>
