@@ -25,3 +25,7 @@
 # Compatibility & Requirements
 Тестировалось и разрабатывалось на Cotonti 0.9.19 + php 7.4 - 0.9.23 + php 8.1
 
+
+# Help & Support | Помощь и поддержка
+Задать вопрос и бесплатная поддержка по ссылке на [форуме](https://abuyfile.com/forums/cotonti/original/skins/tpl-free/topic37)
+
